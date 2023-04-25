@@ -25,15 +25,10 @@ namespace _3dasd
         public Form1()
         {
             InitializeComponent();
-            //  Get the OpenGL object, for quick access.
+
             SharpGL.OpenGL gl = this.openGLControl1.OpenGL;
 
-            //  A bit of extra initialisation here, we have to enable textures.
             gl.Enable(OpenGL.GL_TEXTURE_2D);
-
-            //  Create our texture object from a file. This creates the texture for OpenGL.
-
-            //  Create a light.
 
             //Light light = new Light()
             //{
@@ -54,8 +49,6 @@ namespace _3dasd
             gl.Enable(OpenGL.GL_LIGHT0);
             gl.Enable(OpenGL.GL_NORMALIZE);
 
-
-            //Camera numbers set up
             float fov = 70.0f,
                 aspect = (float)openGLControl1.Width / (float)openGLControl1.Height,
                 zNear = 0.1f,
@@ -71,7 +64,6 @@ namespace _3dasd
 
         private void openGLControl1_OpenGLDraw(object sender, RenderEventArgs args)
         {
-            //  Get the OpenGL object, for quick access.
             SharpGL.OpenGL gl = this.openGLControl1.OpenGL;
 
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
@@ -89,7 +81,6 @@ namespace _3dasd
             psr.render(gl);
 
 
-            //texture.Bind(gl);
             gl.Enable(OpenGL.GL_TEXTURE_2D);
             foreach (MeshRender mesh in listShape)
             {

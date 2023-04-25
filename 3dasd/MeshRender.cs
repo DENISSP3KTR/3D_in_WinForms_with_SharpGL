@@ -25,40 +25,40 @@ namespace _3dasd
             if (MeshType == CUBE)
             {
                 // Перед
-                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, 1.0f));	// Bottom Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, -1.0f, 1.0f));	// Bottom Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, 1.0f, 1.0f));// Top Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, 1.0f));	// Top Left Of The Texture and Quad
+                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, -1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, 1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, 1.0f));
 
                 // Зад
-                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, -1.0f));	// Bottom Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, -1.0f));	// Top Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, 1.0f, -1.0f));	// Top Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, -1.0f, -1.0f));	// Bottom Left Of The Texture and Quad
+                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, 1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, -1.0f, -1.0f));
 
                 // Вверх
-                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, -1.0f));	// Top Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, 1.0f));	// Bottom Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, 1.0f, 1.0f));// Bottom Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, 1.0f, -1.0f));	// Top Right Of The Texture and Quad
+                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, 1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, 1.0f, -1.0f));
 
                 // Вниз
-                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, -1.0f));	// Top Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, -1.0f, -1.0f));	// Top Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, -1.0f, 1.0f));	// Bottom Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, 1.0f));	// Bottom Right Of The Texture and Quad
+                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, -1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, -1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, 1.0f));
 
                 // Право
-                MeshVertexList.Add(new Vertex(1.0f, -1.0f, -1.0f));	// Bottom Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, 1.0f, -1.0f));	// Top Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, 1.0f, 1.0f));// Top Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(1.0f, -1.0f, 1.0f));	// Bottom Left Of The Texture and Quad
+                MeshVertexList.Add(new Vertex(1.0f, -1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, 1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, 1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(1.0f, -1.0f, 1.0f));
 
                 // Лево
-                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, -1.0f));	// Bottom Left Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, 1.0f));	// Bottom Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, 1.0f));	// Top Right Of The Texture and Quad
-                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, -1.0f));	// Top Left Of The Texture and Quad
+                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, -1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, -1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, 1.0f));
+                MeshVertexList.Add(new Vertex(-1.0f, 1.0f, -1.0f));
             }
             else if (MeshType == PYRAMID)
             {
@@ -298,10 +298,10 @@ namespace _3dasd
                 gl.Begin(OpenGL.GL_QUADS);
                 for (int i = 0; i < 6; i++) // 6 face
                 {
-                    gl.TexCoord(0.0f, 0.0f); gl.Vertex(MeshVertexList[i * 4]);  // Bottom Left Of The Texture and Quad
-                    gl.TexCoord(1.0f, 0.0f); gl.Vertex(MeshVertexList[i * 4 + 1]);  // Bottom Right Of The Texture and Quad
-                    gl.TexCoord(1.0f, 1.0f); gl.Vertex(MeshVertexList[i * 4 + 2]);   // Top Right Of The Texture and Quad
-                    gl.TexCoord(0.0f, 1.0f); gl.Vertex(MeshVertexList[i * 4 + 3]);  // Top Left Of The Texture and Quad
+                    gl.TexCoord(0.0f, 0.0f); gl.Vertex(MeshVertexList[i * 4]);
+                    gl.TexCoord(1.0f, 0.0f); gl.Vertex(MeshVertexList[i * 4 + 1]);
+                    gl.TexCoord(1.0f, 1.0f); gl.Vertex(MeshVertexList[i * 4 + 2]);
+                    gl.TexCoord(0.0f, 1.0f); gl.Vertex(MeshVertexList[i * 4 + 3]);
                 }
 
                 gl.End();
